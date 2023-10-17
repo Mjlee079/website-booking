@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -14,10 +20,70 @@ a {
     text-decoration: none;
 }
 
+/* First section start */
+#hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)), url(../assets/bg_img.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#hero .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    padding-block: 40px;
+    position: relative;
+}
+nav {
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: white;
+}
+nav ul li:nth-child(4) {
+    border: 2px solid;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+nav ul li:nth-child(4) span {
+    color: cadetblue;
+}
+nav ul li:not(:nth-child(4)) {
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    font-weight: 500;
+}
+nav ul li.active {
+    background-color: rgb(55, 146, 207);
+    color: white;
+}
+nav ul li:not(:nth-child(4)) {
+    cursor: pointer;
+}
+nav ul li:not(.active,:nth-child(4)):hover {
+    background-color: rgba(42, 136, 165, 0.555);
+    color: white;
+}
+.hambugger {
+    display: none;
+}
+.text-content {
+    position: absolute;
+    bottom: 20%;
+}
+.text-content p {
+    font-size: clamp(45px, 6vw, 59px);
+    color: white;
+    font-weight: 800;
+}
+/* First section end */
+
 
 /* Second Section Styling Starts */
 #book-room {
-    padding: 20px;
+    padding: 3rem 20px;
 }
 .book-room-container {
     width: 100%;

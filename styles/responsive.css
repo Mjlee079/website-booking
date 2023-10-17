@@ -1,1 +1,29 @@
 /* Use this css file for all responsive styles */
+@media screen and (max-width: 900px) {
+    #hero {
+        height: 100vh;
+    }
+    nav {
+        background-color: transparent;
+        padding: 10px 10px;
+    }
+    .hambugger {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .hambugger span {
+        width: 40px;
+        height: 2px;
+        background-color: white;
+    }
+    nav ul li:nth-child(4) {
+        border: 2px solid white;
+    }
+    nav ul li:not(:nth-child(4)) {
+        display: none;
+    }
+}
